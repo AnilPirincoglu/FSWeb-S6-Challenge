@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
 .App {
   text-align: center;
 }
-.Header {
-  color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
-}
+
+
 /* write your parent styles in here for your App.js */

@@ -1,6 +1,6 @@
 
 
-const Karakter = () => {
+const Karakterler = () => {
     return (
         <div>
 
@@ -8,4 +8,4 @@ const Karakter = () => {
     );
 }
 
-export default Karakter;
+export default Karakterler;
