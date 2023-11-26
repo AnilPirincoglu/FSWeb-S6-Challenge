@@ -7,5 +7,14 @@
   text-align: center;
 }
 
+.accordion {
+  width: 50%;
+  margin: auto;
+}
+
+.accordion-item {
+  margin-bottom: .5rem;
+  background-color: #ffffff5c;
+}
 
 /* write your parent styles in here for your App.js */

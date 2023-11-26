@@ -1,11 +1,8 @@
-
-
-const Karakter = () => {
+const Films = () => {
     return (
         <div>
 
         </div>
     );
 }
-
-export default Karakter;
+export default Films;

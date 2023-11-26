@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Header = (args) => {
 
-    const { toggle } = args;
+    const { setIsOpen, isOpen } = args;
 
     const StyledHeader = styled.header`
         background-color: #443e3e44;
@@ -30,8 +30,7 @@ const Header = (args) => {
     return (
         <StyledHeader>
             <Title>Star Wars MiniWiki</Title>
-            <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png" onClick={toggle} />
-
+            <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png" onClick={() => { setIsOpen(!isOpen) }} />
         </StyledHeader>
     );
 }
