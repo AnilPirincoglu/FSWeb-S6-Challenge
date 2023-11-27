@@ -1,15 +1,15 @@
-
 import {
   AccordionBody,
   AccordionHeader,
   AccordionItem,
 } from 'reactstrap';
-import Films from './Films';
 
-const Karakter = (args) => {
+import CharacterFilms from './CharacterFilms';
+
+
+const Character = (args) => {
 
   const { item } = args;
-
 
 
   return (
@@ -25,7 +25,7 @@ const Karakter = (args) => {
             <p><strong>Eye Color</strong> : {item.eye_color}</p>
             <p><strong>Birth Year</strong> : {item.birth_year}</p>
             <p><strong>Gender</strong> : {item.gender}</p>
-            <Films />
+            <p><strong>Films</strong> : <CharacterFilms films={item.films} /> </p>
           </div>
 
 
@@ -35,4 +35,4 @@ const Karakter = (args) => {
   );
 }
 
-export default Karakter;
+export default Character;

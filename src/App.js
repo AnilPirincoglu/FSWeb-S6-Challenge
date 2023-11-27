@@ -13,14 +13,18 @@ const App = () => {
   const [isOpen, setIsOpen] = useState(true);
   const [mainComponent, setMainComponent] = useState("welcome")
 
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  }
+
   useEffect(() => {
     setIsOpen(!isOpen);
   }, [mainComponent]);
 
   return (
     <div className="App">
-      <Header setIsOpen={setIsOpen} isOpen={isOpen} />
-      <ReactSideBar isOpen={isOpen} setIsOpen={setIsOpen} setMainComponent={setMainComponent} />
+      <Header toggle={toggle} />
+      <ReactSideBar open={isOpen} toggle={toggle} setMainComponent={setMainComponent} />
       <Main mainComponent={mainComponent} />
       <Footer />
     </div>

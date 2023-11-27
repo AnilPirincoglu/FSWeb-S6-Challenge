@@ -4,11 +4,11 @@ import "./ReactSideBar.css"
 
 const ReactSideBar = (args) => {
 
-    const { isOpen, setMainComponent, setIsOpen } = args;
+    const { open, toggle, setMainComponent } = args;
 
     return (
-        <Offcanvas isOpen={isOpen} toggle={() => { setIsOpen(!isOpen) }}>
-            <OffcanvasHeader toggle={() => { setIsOpen(!isOpen) }}>
+        <Offcanvas isOpen={open} toggle={toggle}>
+            <OffcanvasHeader toggle={toggle}>
                 Menu
             </OffcanvasHeader>
             <OffcanvasBody >

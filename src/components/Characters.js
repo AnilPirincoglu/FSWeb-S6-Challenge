@@ -1,21 +1,24 @@
 import { Accordion, Spinner } from "reactstrap";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Karakter from "./Character";
+import Character from "./Character";
 
 
 const Characters = () => {
 
     const [characters, setCharacters] = useState([]);
-    const [isLoading, setIsLoading] = useState();
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         setIsLoading(true);
 
-        axios.get("https://swapi.dev/api/people/")
-            .then(res => setCharacters(res.data));
+        axios.get("https://swapi.dev/api/people")
+            .then(res => {
+                setCharacters(res.data.results);
+                setIsLoading(false);
+            });
 
-        setIsLoading(false);
+
     }, []);
 
     const [open, setOpen] = useState('1');
@@ -30,8 +33,8 @@ const Characters = () => {
     return (
         <Accordion open={open} toggle={toggle}>
             <h1>Karakterler</h1>
-            {isLoading && <Spinner></Spinner>}
-            {isLoading ? <Spinner></Spinner> : characters.map((item, index) => <Karakter key={index} item={item} />)}
+
+            {isLoading ? <Spinner>Loading...</Spinner> : characters.map((item, index) => <Character key={index} item={item} />)}
         </Accordion>
     );
 }
